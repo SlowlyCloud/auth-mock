@@ -1,0 +1,20 @@
+{
+    "name": "auth-mock",
+    "version": "0.0.1",
+    "description": "mocking auth flow and providing token for testing other services.",
+    "main": "app.js",
+    "repository": "https://github.com/SlowlyCloud/auth-mock.git",
+    "author": "Rick Ryan",
+    "license": "MIT",
+    "scripts": {
+      "start": "node .",
+      "start-pretty": "node . | ./node_modules/.bin/bunyan",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+      "bunyan": "^1.8.15",
+      "express": "^4.18.1",
+      "express-async-errors": "^3.1.1",
+      "jsonwebtoken": "^8.5.1"
+    }
+  }
