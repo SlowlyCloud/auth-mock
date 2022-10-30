@@ -10,8 +10,8 @@ const basePath = '/'
 const pk = 'SlVoczZqMzJebGRlcmxhamFrbHNkZmpwb3dpdWVyamFzbGtkZmpsc2R1Zm9pd2Vqb2k0NjVld2VldzhyNjU0c2Q0M2RzJigkIyYoKiQjXjc5ODMyNzQ5OHNmZGl1ZXdAJigqJCMoIypVKCokJCQjJiokJigjQCYoJCYoI0AqZmV3dDM0MjIqMzI0Mzc4NWZkZmhnaHQzNHU0NTR0cnQsbGRpODIzajM='
 const kepPem = Buffer.from(pk, 'base64')
 const algorithm = 'HS512'
-const expiresIn = '356d'
-const audience = []
+const expiresIn = '60d'
+const audience = ''
 const issuer = ''
 
 
@@ -22,6 +22,8 @@ app.get("/token", (req, res) => {
             kepPem,
             {
                 algorithm: algorithm,
+                audience: audience,
+                issuer: issuer,
                 expiresIn: expiresIn
             }
         )
